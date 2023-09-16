@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  width: 1440px;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  place-content: center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: auto;
+}
+.movieGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  align-content: center;
+  /* grid-auto-columns: minmax(100px, auto); */
+  width: 64rem;
+  margin: auto;
+}
+.movieGridHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36em;
+  margin-top: 11em;
+  margin-bottom: 1.5em;
+}
+.movieGridHeader a {
+  text-decoration: none;
+  color: rgb(190, 18, 60);
+  font-size: 1.2rem;
+}
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+}
+
+.movieCard {
+  display: grid;
+}
+.movieTitle {
+  font-size: 1rem;
+  color: rgb(23, 23, 31);
+  width: 13em;
+
+}
+.releaseDate {
+  font-size: 0.8rem;
+}
+.cardImg {
+  height: 16em;
+  width: 13em;
+}
+#fave {
+  position: relative;
+  right: 2.3em;
+  bottom: 13.6em;
+}
+.fave:hover, .my-class {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+
+}
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 13em;
+
+  gap: 4em;
+}
+.heroPage {
+  max-width: 1440px;
+  margin: auto;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.heroPage nav {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10em;
+  z-index: 1;
+  padding-top: 1.2em;
+  padding-left: 3em;
+}
+.searchBar {
+  border: 0.15em solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0.8em;
+  height: 2em;
+  border-radius: 0.7em;
+  font-weight: 600;
+}
+#search {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 20em;
+  padding-left: 0.8em;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.signing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 10em;
+  place-content: left;
+}
+.signing a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.signing img {
+  height: 2em;
+}
+.heroImg {
+  width: 84.33rem;
+  height: 30em;
+  z-index: -20;
+  position: absolute;
+}
+.herotitle {
+  color: white;
+  padding-left: 1.4em;
+  padding-bottom: 0.5em;
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 9em;
+  margin-top: 1em;
+}
+.heroOverview {
+  text-align: left;
+  width: 28em;
+  padding-left: 3.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.1rem;
+}
+.release {
+  padding-left: 3.8em;
+  font-size: 1rem;
+  padding-bottom: 1.4em;
+}
+.unwanted {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.watchButton {
+  border: none;
+  outline: none;
+  background-color: rgb(190, 18, 60);
+  margin-left: 3.5em;
+  display: inline-block;
+  display: flex;
+  padding: 0.4em 0.4em;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 0.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  display: grid;
+  text-align: center;
+  gap: 0.6em;
+  margin-top: 5em;
+}
+.icons {
+  display: grid;
+  width: 10em;
+  margin: auto;
+  grid-template-columns: repeat(4,1fr);
+}
+.terms {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 25em;
+  margin: auto;
+  color: rgb(23, 23, 31);
+  font-weight: 500;
+}
+.copy {
+  font-size: 0.8rem;
+}
+.showDetails {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  place-content: center;
+  width: 84.2rem;
+  margin:0em auto;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  border: 0.1em solid #0000004D;
+  height: 50em;
+  padding-top: 1.7em;
+  padding-left: 1.5em;
+  padding: 2em 0em 1em 2em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 0em 2.3em 2.3em 0em;
+
+}
+.menu a {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 8.5em;
+  align-self: start;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 2em;
+}
+.menu a span {
+  color: #666666;
+}
+.pinkBox {
+  display: grid;
+  place-content: center;
+  gap: 0.5em;
+  background-color: #FCF5F7;
+  border: 0.1em solid #BE123CB2;
+  font-size: 0.7rem;
+  width: 12.8em;
+  padding: 0.3em 1em;
+  border-radius: 0.5em;
+  color: #666666;
+
+}
+.pinkBox button {
+  background-color: #F0C8D2;
+  color: #BE123CB2;
+  width: 6.9em;
+  height: 1.8em;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 0.8em;
+  margin:0.5em auto;
+}
+.details {
+  margin: 2em 2.8em;
+  /* font-size: 1.2rem; */
+}
+.detailsImg {
+  width: 62rem;
+  height: 25em;
+  border-radius: 2em;
+  position: absolute;
+  z-index: -3;
+}
+.playbutton {
+position: relative;
+width: 6em;
+margin:7em 28em 0.2em;
+}
+.watch {
+position: relative;
+text-align: center;
+color: #FCF5F7;
+font-size: 1.2rem;
+font-weight: 400;
+
+}
+.long {
+  margin-top: 11em;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  line-height: 2em;
+
+}
+.colored {
+  color: #B91C1C;
+  border-radius: 1em;
+  border: 0.1em solid #C7C7C7;
+  padding:0.3em 0.8em;
+  margin: 0em 0.3em;
+  text-align: center;
+}
+.detailsOverview {
+  height: 100px;
+  margin-top: 1em;
+  font-size: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5em;
+}
+.secondGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.name {
+  height: 1.1em;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+  gap: 0.3em;
+  border-radius: 1em;
+  border: 0.1em solid #C7C7C7;
+}
+.top span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.topbutton {
+  width: 14em;
+  border-radius: 1em;
+  border: none ;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #BE123C;
+}
+.expand {
+  padding: 0.6em 0em 0em 6em;
+}
+.seebutton, .morebutton {
+  width: 16em;
+  height: 2.2em;
+  border: none ;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2em;
+  gap: 0.3em;
+  border-radius: 0.5em;
+}
+.seebutton {
+  background-color: #BE123C;
+  color: white;
+}
+.morebutton {
+  background-color: #F8E7EB;
+}
+.rectangle {
+  width: 19em;
 }
