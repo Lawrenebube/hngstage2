@@ -10,6 +10,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
+  
   useEffect(() => {
     const getMovies = () => {
       fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=6d8269dd4a4e30caa9145370b559b349&language=en-US")
