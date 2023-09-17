@@ -22,7 +22,7 @@ This web application allows users to search for movies, view details about them,
 The user interface of this application is designed to be visually appealing and responsive. The top 10 movies are displayed on the homepage in a grid layout with their movie posters. Each movie card displays the movie title and release date.
 
 ### Movie Card
-
+- Movie Card : [data-testid: movie-card]
 - Movie Poster: [data-testid: movie-poster]
 - Movie Title: [data-testid: movie-title]
 - Movie Release Date: [data-testid: movie-release-date]
