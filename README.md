@@ -1,7 +1,3 @@
-Certainly! Below is a sample README file for your movie discovery web application:
-
----
-
 # Movie Box Application
 
 This web application allows users to search for movies, view details about them, and save their favorite movies. Movie data is fetched from the TMDB API.
