@@ -26,7 +26,7 @@ const Hero = ({oneMovie}) => {
                 </div>
               </nav>
               <h2 data-testid="movie-title" className='herotitle'>{oneMovie.title}</h2>
-              <p className='heroOverview'>{oneMovie.overview}</p>
+              <p className='heroOverview' data-testid="movie-overview">{oneMovie.overview}</p>
               <p data-testid="movie-release-date">{oneMovie.release_date}</p>
               <button className='watchButton'>
                 <img src={require ('./assets/Play.svg').default} />
