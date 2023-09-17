@@ -102,7 +102,7 @@ const Show = () => {
             <p className=''>
               <span className="name" data-testid="movie-title"> {movie.title} •</span>
               <span data-testid="movie-release-date">{formatReleaseDate(movie.release_date)}</span>
-              <span data-testid="movie-runtime">  {movie.runtime} mins</span>
+              <span data-testid="movie-runtime">  {movie.runtime} </span><span>minutes</span>
               <span className='colored'> Action</span>
               <span className='colored'> Drama</span>
             </p>
