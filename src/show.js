@@ -11,9 +11,19 @@ const Show = () => {
 
 
   const { id } = useParams();
+  const formatReleaseDate = (releaseDate) => {
+    const date = new Date(releaseDate);
+    return date.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    });
+  };
 
   useEffect(() => {
     const movieId = localStorage.getItem('movieId');
+    
 
     const getMoviesDetails = () => {
       if (movieId) {
@@ -93,7 +103,7 @@ const Show = () => {
           <div className='long '>
             <p className=''>
               <span className="name" data-testid="movie-title"> {movie.title} </span> <span>•</span>
-              <span data-testid="movie-release-date">{movie.release_date}</span>
+              <span data-testid="movie-release-date">{formatReleaseDate(movie.release_date)}</span>
               <span data-testid="movie-runtime">{movie.runtime}</span><span>minutes</span>
               <span className='colored'> Action</span>
               <span className='colored'> Drama</span>
