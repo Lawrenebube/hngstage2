@@ -36,9 +36,9 @@ const MoviesCard = ({firstMovies}) => {
         <h2>Featured Movie</h2>
         <a href='#'>See More &gt; </a>
       </div>
-      <div className='movies'>
+      <div className='movies' data-testid=" movie-card">
         {firstMovies.map(movie => (
-          <div className="movieCard" key={movie.id} data-testid=" movie-card">
+          <div className="movieCard" key={movie.id} >
             <div>
             <Link to={`/movies/${movie.id}`} key={movie.id}  >
               <img className='cardImg' src={baseUrl + movie.poster_path} data-testid="movie-poster" onClick={() => handleMovieClick(movie.id)}  />
