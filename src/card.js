@@ -8,15 +8,6 @@ const MoviesCard = ({firstMovies}) => {
 
   const [addClass, setAddClass] = useState(false);
   const [movieId, setMovieId] = useState(localStorage.getItem('movieId') || null);
-  const formatReleaseDate = (releaseDate) => {
-    const date = new Date(releaseDate);
-    return date.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      year: "numeric",
-      month: "numeric",
-      day: "numeric",
-    });
-  };
 
   const toggleIconColor = () => {
     setAddClass(!addClass);
@@ -46,7 +37,7 @@ const MoviesCard = ({firstMovies}) => {
               <img className={addClass ? 'my-class' : ''} src={require ('./assets/Favorite.svg').default} id='fave'onClick={toggleIconColor} />
 
             </div>
-            <p data-testid="movie-release-date">{formatReleaseDate(movie.release_date)}</p>
+            <p data-testid="movie-release-date">{movie.release_date}</p>
             <h2 data-testid ="movie-title" className='movieTitle'>{movie.title}</h2>
             <div className='images'>
               <div className='unwanted'>

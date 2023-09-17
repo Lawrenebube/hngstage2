@@ -1,15 +1,5 @@
 const Hero = ({oneMovie}) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w500/';
-  const formatReleaseDate = (releaseDate) => {
-    const date = new Date(releaseDate);
-    return date.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      year: "numeric",
-      month: "numeric",
-      day: "numeric",
-    });
-  };
-
 
 
     return (
@@ -37,7 +27,7 @@ const Hero = ({oneMovie}) => {
               </nav>
               <h2 data-testid="movie-title" className='herotitle'>{oneMovie.title}</h2>
               <p className='heroOverview'>{oneMovie.overview}</p>
-              <p data-testid="movie-release-date">{formatReleaseDate(oneMovie.release_date)}</p>
+              <p data-testid="movie-release-date">{oneMovie.release_date}</p>
               <button className='watchButton'>
                 <img src={require ('./assets/Play.svg').default} />
                 <span>WATCH TRAILER</span>
