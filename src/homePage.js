@@ -1,4 +1,4 @@
-import MoviesCard from './movies';
+import MoviesCard from './card';
 import FooterComponent from './footer';
 import Hero from './hero';
 import Show from './show';
