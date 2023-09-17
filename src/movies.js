@@ -38,7 +38,7 @@ const MoviesCard = ({firstMovies}) => {
       </div>
       <div className='movies' data-testid=" movie-card">
         {firstMovies.map(movie => (
-          <div className="movieCard" key={movie.id} >
+          <div className="movieCard" key={movie.id} data-testid=" movie-card" >
             <div>
             <Link to={`/movies/${movie.id}`} key={movie.id}  >
               <img className='cardImg' src={baseUrl + movie.poster_path} data-testid="movie-poster" onClick={() => handleMovieClick(movie.id)}  />

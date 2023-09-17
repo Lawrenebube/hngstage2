@@ -23,7 +23,6 @@ const Hero = ({oneMovie}) => {
               <nav>
                 <div>
                   <img src={require ('./assets/Logo.svg').default} />
-                  {/* <span>MovieBox</span> */}
                 </div>
                 <div className='searchBar'>
                 <input type="text" id="search" placeholder='What do you want to watch'/>
