@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Certainly! Below is a sample README file for your movie discovery web application:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Movie Discovery Web Application
 
-In the project directory, you can run:  
+This web application allows users to search for movies, view details about them, and save their favorite movies. Movie data is fetched from the TMDB API.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [User Interface](#user-interface)
+- [Movie Details](#movie-details)
+- [API Integration](#api-integration)
+- [Error Handling](#error-handling)
+- [Deployment](#deployment)
+- [Local Setup](#local-setup)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## User Interface
 
-### `npm test`
+The user interface of this application is designed to be visually appealing and responsive. The top 10 movies are displayed on the homepage in a grid layout with their movie posters. Each movie card displays the movie title and release date.
 
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Movie Card
 
-### `npm run build`
+- Movie Poster: [data-testid: movie-poster]
+- Movie Title: [data-testid: movie-title]
+- Movie Release Date: [data-testid: movie-release-date]
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Movie Details
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+When visiting the `/movies/:id` route (where `:id` is the movie ID), users can view detailed information about a specific movie.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Movie Title: [data-testid: movie-title]
+- Release Date (in UTC): [data-testid: movie-release-date]
+- Runtime (in minutes): [data-testid: movie-runtime]
+- Overview: [data-testid: movie-overview]
 
-### `npm run eject`
+## API Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This application integrates with the TMDB API to fetch movie data. It uses the following API endpoint:
+- Fetch movie details by ID: [https://api.themoviedb.org/3/movie/{movie_id}](https://api.themoviedb.org/3/movie/{movie_id})
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Error Handling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Meaningful error messages are displayed to users in case of API failures or other issues to enhance the user experience.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+The frontend of this application is hosted on [GitHub Pages](https://github.com/Lawrenebube/hngstage2).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Access the deployed application: [Movie Discovery Web Application](https://hngstage2-phi.vercel.app)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Local Setup
 
-### Code Splitting
+To run this project locally, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone this repository: `git clone <repository_url>`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
 
-### Analyzing the Bundle Size
+The application will be accessible at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute to this project. Fork the repository, make your changes, and submit a pull request.
